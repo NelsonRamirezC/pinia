@@ -176,7 +176,7 @@ export const useMainStore = defineStore('main', {
   // optional actions
   actions: {
     reset() {
-      // `this` is the store instance
+      // `this` is the store instance.
       this.counter = 0
     },
   },
@@ -193,13 +193,13 @@ export default defineComponent({
   setup() {
     const main = useMainStore()
 
-    // extract specific store properties
+    // extract specific store properties.
     const { counter, doubleCounter } = storeToRefs(main)
 
     return {
-      // gives access to the whole store in the template
+      // gives access to the whole store in the template.
       main,
-      // gives access only to specific state or getter
+      // gives access only to specific state or getter.
       counter,
       doubleCounter,
     }
